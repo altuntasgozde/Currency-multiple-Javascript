@@ -1,0 +1,20 @@
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    padding: 40px;
+}
+
+.radio {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+input[type="radio"]:focus{
+    outline: 1px solid #fff;
+}
+
+
