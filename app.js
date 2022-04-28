@@ -8,7 +8,7 @@ changeBtn.addEventListener("click",change);
 // Change function 
 function change(){
     const xhr = new XMLHttpRequest();
-    xhr.open("GET","https://v6.exchangerate-api.com/v6/d82e33377c0590c246b3675a/latest/TRY");
+    xhr.open("GET","https://api.currencyapi.com/v3/latest?apikey=6eb298f0-5465-11ec-89a1-f78998a370de&currencies=EUR%2CUSD%2CGBP%2CCHF&base_currency=TRY");
   
 
     xhr.onload = function(){
@@ -17,7 +17,7 @@ function change(){
    
                 const response = JSON.parse(this.responseText);
     
-                const rate = response.conversion_rates.USD;
+                const rate = response.data.USD.value;
     
                 const amount = Number(firstInput.value);
     
@@ -28,7 +28,7 @@ function change(){
    
                 const response = JSON.parse(this.responseText);
     
-                const rate = response.conversion_rates.EUR;
+                const rate = response.data.EUR.value;
     
                 const amount = Number(firstInput.value);
     
@@ -39,7 +39,7 @@ function change(){
    
                 const response = JSON.parse(this.responseText);
     
-                const rate = response.conversion_rates.GBP;
+                const rate = response.data.GBP.value;
     
                 const amount = Number(firstInput.value);
     
@@ -50,7 +50,7 @@ function change(){
    
                 const response = JSON.parse(this.responseText);
     
-                const rate = response.conversion_rates.CHF;
+                const rate = response.data.CHF.value;
     
                 const amount = Number(firstInput.value);
     
